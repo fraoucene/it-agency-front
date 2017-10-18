@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./tmp/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "target": "es5",
+    "jsx": "react",
+    "pretty": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "noImplicitThis": true,
+    "baseUrl": "./node_modules"
+  },
+  "include": [
+    "node_modules/@types/**/index.d.ts",
+    "src/**/*",
+    "test/**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}

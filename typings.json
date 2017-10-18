@@ -1,0 +1,17 @@
+{
+  "globalDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20160601211834",
+    "chai-things": "registry:dt/chai-things#0.0.0+20160906135318",
+    "enzyme": "registry:dt/enzyme#2.4.1+20161004164857",
+    "leaflet": "registry:dt/leaflet#0.7.0+20160919070725",
+    "leaflet-draw": "registry:dt/leaflet-draw#0.2.4+20160919070725",
+    "react": "registry:dt/react#0.14.0+20160927082313",
+    "react-addons-css-transition-group": "registry:dt/react-addons-css-transition-group#0.14.0+20160316155526",
+    "react-addons-transition-group": "registry:dt/react-addons-transition-group#0.14.0+20160701001352",
+    "react-bootstrap": "registry:dt/react-bootstrap#0.0.0+20160806072414",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-redux": "registry:dt/react-redux#4.4.0+20160908183346",
+    "redux": "registry:dt/redux#3.5.2+20160703092728",
+    "sinon": "registry:dt/sinon#1.16.0+20160924120326"
+  }
+}
