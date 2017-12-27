@@ -1,2 +1,2 @@
-# iFacture
-une plateforme d'edition de factures et de comptabilité en ligne.
+# Info Tech agency
+Site web de l'entreprise INFO TECH AGENCY et de comptabilité en ligne.
