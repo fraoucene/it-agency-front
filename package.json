@@ -1,7 +1,7 @@
 {
-  "name": "iFacture",
+  "name": "info-tech-agency",
   "version": "1.0.0",
-  "description": "facture it",
+  "description": "Info tech agency",
   "main": "index.js",
   "scripts": {
     "wp": "webpack",
