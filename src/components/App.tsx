@@ -15,6 +15,8 @@ import {PageJoin} from './join/join';
 import {PageOffres} from './offres/offres';
 import {PageSolutions} from './Solutions/solutions';
 import {PageContact} from './contact/contact';
+import {PageCandidature} from './candidature/candidature';
+import {PageRecrutement} from './recrutement/recrutement';
 
 interface LocalState {
 }
@@ -68,7 +70,7 @@ export class AppInternal extends React.Component<Props, LocalState> {
 
     render() {
         return (
-            <div>
+            <div className="cover-full">
                 <Header/>
                 <div style={{height: '100%', width: '100%'}}>
                     {
@@ -76,6 +78,8 @@ export class AppInternal extends React.Component<Props, LocalState> {
                         this.props.page.id === Page.SOLUTIONS && <PageSolutions /> ||
                         this.props.page.id === Page.OFFRES && <PageOffres /> ||
                         this.props.page.id === Page.JOIN && <PageJoin /> ||
+                        this.props.page.id === Page.CANDIDATURE && <PageCandidature /> ||
+                        this.props.page.id === Page.RECRUTEMENT && <PageRecrutement /> ||
                         this.props.page.id === Page.CONTACT && <PageContact />
                     }
                 </div>
