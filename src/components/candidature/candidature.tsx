@@ -1,5 +1,9 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+import {CandidatureForm} from './form';
+import {Partenaires} from './partenaire';
+import {Metiers} from './metiers';
+import {Engagements} from './engagements';
 
 interface DispatchProps {
     readonly loadCandidaturePage: () => void;
@@ -21,9 +25,28 @@ class PageCandidatureInternal extends React.Component<Props, void> {
 
     render() {
         return (
-            <span>
-                Je Suis la page candidature
-            </span>);
+            <div>
+                <div className="candidature-wrapper">
+                    <div className="container">
+                        <h2 className="candidature-desc">
+                            Rejoignez un leader du digital qui vous offrira l’opportunité de vous impliquer,
+                            inspirera votre créativité et développera votre carrière.
+                        </h2>
+                    </div>
+                </div>
+                <div>
+                    <CandidatureForm />
+                </div>
+                <div className="univ__2">
+                    <Metiers />
+                </div>
+                <div>
+                    <Engagements />
+                </div>
+                <div className="univ__2">
+                    <Partenaires />
+                </div>
+            </div>);
     }
 }
 

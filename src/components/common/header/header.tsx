@@ -40,10 +40,10 @@ export class HeaderInternal extends React.Component<Props, void> {
         return (
             <div>
                 <ul className="nav navbar-nav social">
-                    <li onClick={() => location.href = 'mailto:infotechanecy.contact@gmail.com'}>
+                    <li onClick={() => location.href = 'mailto:infotechagency.contact@gmail.com'}>
                         <span className="fa fa-envelope social-item" />
                         <span className="cUniv pointer">
-                           infotechanecy.contact@gmail.com</span>
+                           infotechagency.contact@gmail.com</span>
                     </li>
                     <li className="social-item" style={{ padding: '12px 15px'}}> | </li>
                     <li><span className="fa fa-facebook social-item" /></li>

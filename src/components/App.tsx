@@ -13,10 +13,11 @@ import {Loader} from './loader';
 import {extractPage} from '../reducers/utils/url-utils';
 import {PageJoin} from './join/join';
 import {PageOffres} from './offres/offres';
-import {PageSolutions} from './Solutions/solutions';
+import {PageSolutions} from './solutions/solutions';
 import {PageContact} from './contact/contact';
 import {PageCandidature} from './candidature/candidature';
 import {PageRecrutement} from './recrutement/recrutement';
+import {Footer} from './common/footer/footer';
 
 interface LocalState {
 }
@@ -82,6 +83,7 @@ export class AppInternal extends React.Component<Props, LocalState> {
                         this.props.page.id === Page.RECRUTEMENT && <PageRecrutement /> ||
                         this.props.page.id === Page.CONTACT && <PageContact />
                     }
+                <Footer />
                 </div>
                 <Loader/>
                 <Notifier/>

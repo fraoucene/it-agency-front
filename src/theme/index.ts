@@ -2,7 +2,7 @@ const leftColum  = 450;
 const margin  = 5;
 export const Theme = {
     colors: {
-        nav: '#E91E63',
+        nav: '#22a39f',
         noValid: '#ff9999',
         valid: '#5be568',
     },
