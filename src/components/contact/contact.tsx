@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+import {Form} from '../candidature/form';
 
 interface DispatchProps {
     readonly loadContactPage: () => void;
@@ -21,9 +22,9 @@ class PageContactInternal extends React.Component<Props, void> {
 
     render() {
         return (
-            <span>
-                Je Suis la page contact
-            </span>);
+            <div>
+                <Form />
+            </div>);
     }
 }
 

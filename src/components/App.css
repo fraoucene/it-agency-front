@@ -122,11 +122,23 @@ input[type="color"]:focus,
 .header {
     position: fixed;
     background: #222222;
-    float: right;
     width: 110px;
-    top: 15%;
-    right: 4%;
+    top: 140px;
     z-index: 10;
+}
+
+.header-small {
+    position: fixed;
+    background: #222222;
+    font-size: 22px;
+    padding: 8px 9px;
+    color: #22a39f;
+    top: 140px;
+    z-index: 10;
+}
+
+.header-social-small{
+    top: 190px !important;
 }
 
 .header-ul {
@@ -191,10 +203,10 @@ input[type="color"]:focus,
 
 }
 .social {
-    position: absolute;
-    right: 75px;
+    position: fixed;
     z-index: 10;
-    width: 22%;
+    top: 190px;
+    width: 405px;
     background: #222;
 }
 .social-item {
@@ -349,8 +361,9 @@ input[type="color"]:focus,
 
 .techno-img {
     background-color: #9e9e9e;
-    margin: 8px;
-    min-height: 125px;
+    margin: 5px;
+    height: 110px;
+    width: 110px;
     border-radius: 50%;
 }
 .techno-img:hover {

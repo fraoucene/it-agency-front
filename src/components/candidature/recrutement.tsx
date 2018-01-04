@@ -1,26 +1,26 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+import {Form} from './form';
 import {Partenaires} from './partenaire';
 import {Metiers} from './metiers';
 import {Engagements} from './engagements';
-import {Form} from './form';
 
 interface DispatchProps {
-    readonly loadCandidaturePage: () => void;
+    readonly loadRecrutPage: () => void;
 }
 
 type Props = DispatchProps;
 
 const mapDispatchToProps = (): DispatchProps => {
     return {
-        loadCandidaturePage: () => console.log('loadCandidaturePage...')
+        loadRecrutPage: () => console.log('loadCandidaturePage...')
     };
 };
 
-class PageCandidatureInternal extends React.Component<Props, void> {
+class PageRecrutInternal extends React.Component<Props, void> {
 
     componentWillMount(): void {
-        this.props.loadCandidaturePage();
+        this.props.loadRecrutPage();
     }
 
     render() {
@@ -51,4 +51,4 @@ class PageCandidatureInternal extends React.Component<Props, void> {
     }
 }
 
-export const PageCandidature = connect(mapDispatchToProps)(PageCandidatureInternal);
+export const PageRecrutement = connect(mapDispatchToProps)(PageRecrutInternal);

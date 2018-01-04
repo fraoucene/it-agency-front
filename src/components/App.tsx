@@ -16,8 +16,8 @@ import {PageOffres} from './offres/offres';
 import {PageSolutions} from './solutions/solutions';
 import {PageContact} from './contact/contact';
 import {PageCandidature} from './candidature/candidature';
-import {PageRecrutement} from './recrutement/recrutement';
 import {Footer} from './common/footer/footer';
+import {PageRecrutement} from './candidature/recrutement';
 
 interface LocalState {
 }
