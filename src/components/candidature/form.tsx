@@ -2,8 +2,13 @@ import * as React from 'react';
 import {State} from '../../reducers';
 import {Page} from '../../beans/page';
 import {connect} from 'react-redux';
+import {sendEmailCandidature, sendEmailInformation, sendEmailRecrutement} from '../../actions/email';
+import {Candidature} from '../../beans/form/candidature';
 import RECRUTEMENT = Page.RECRUTEMENT;
 import CONTACT = Page.CONTACT;
+import {Recrutment} from '../../beans/form/recrutment';
+import {Information} from '../../beans/form/information';
+import CANDIDATURE = Page.CANDIDATURE;
 
 interface LocaleState {
     readonly raisonSocial: string;
@@ -19,13 +24,27 @@ interface StateProps {
     readonly page: Page;
 }
 
+interface DispatchProps {
+    readonly sendEmailCandidature: (candidature: Candidature) => void;
+    readonly sendEmailRecrutement: (recrutement: Recrutment) => void;
+    readonly sendEmailInformation: (information: Information) => void;
+}
+
 const mapStateToProps = (state: State): StateProps => {
     return {
         page: state.page
     };
 };
 
-type Props = StateProps;
+const mapDispatchToProps = (dispatch: Function): DispatchProps => {
+    return {
+        sendEmailCandidature: (candidature: Candidature) => dispatch(sendEmailCandidature(candidature)),
+        sendEmailRecrutement: (recrutment: Recrutment) => dispatch(sendEmailRecrutement(recrutment)),
+        sendEmailInformation: (information: Information) => dispatch(sendEmailInformation(information)),
+    };
+};
+
+type Props = StateProps & DispatchProps;
 class FormInternal extends React.Component<Props, LocaleState> {
 
     constructor() {
@@ -50,7 +69,33 @@ class FormInternal extends React.Component<Props, LocaleState> {
     private inputMessage: HTMLTextAreaElement;
 
     post = () => {
-        console.log('post', this.state);
+        this.props.page.id === CANDIDATURE &&
+        this.props.sendEmailCandidature(new Candidature(
+            this.state.nom,
+            this.state.prenom,
+            this.state.post,
+            this.state.phone,
+            this.state.email,
+            this.state.message,
+        ));
+        this.props.page.id === RECRUTEMENT &&
+        this.props.sendEmailRecrutement(new Recrutment(
+            this.state.raisonSocial,
+            this.state.nom,
+            this.state.prenom,
+            this.state.post,
+            this.state.phone,
+            this.state.email,
+            this.state.message,
+        ));
+        this.props.page.id === CONTACT &&
+        this.props.sendEmailInformation(new Information(
+            this.state.nom,
+            this.state.prenom,
+            this.state.phone,
+            this.state.email,
+            this.state.message,
+        ));
     }
     isNotNullOrEmpty = (value: string) => !(!value || value === undefined || value === '' || value.length === 0);
     valid = (): boolean => {
@@ -135,4 +180,4 @@ class FormInternal extends React.Component<Props, LocaleState> {
     }
 }
 
-export const Form = connect(mapStateToProps)(FormInternal);
+export const Form = connect(mapStateToProps, mapDispatchToProps)(FormInternal);
