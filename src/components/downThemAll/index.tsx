@@ -13,7 +13,7 @@ export class DownThemAll extends React.Component<Props, void> {
                 line.click();
             }
         });
-    };
+    }
 
     render() {
         return (
@@ -21,7 +21,7 @@ export class DownThemAll extends React.Component<Props, void> {
                 <div className="btn btn-primary btn btn-block login-btn univ"
                     onClick={this.downThemAll}>DOWNTHEMALL</div>
                 {this.props.imagesUrl.split(',')
-                    .map((a, index) => <div key={index}><a id={index + ''} href={'https://' + a}
+                    .map((a, index) => <div key={index}><a id={index + ''} href={'http://' + a}
                          download>{a}</a></div>)}
              </div>
         );

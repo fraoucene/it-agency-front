@@ -23,7 +23,9 @@ class PageContactInternal extends React.Component<Props, void> {
     render() {
         return (
             <div>
-                <Form />
+                <div className="wrapper wrapper-contact">
+                    <Form/>
+                </div>
             </div>);
     }
 }

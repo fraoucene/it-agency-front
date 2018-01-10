@@ -114,7 +114,7 @@ class FormInternal extends React.Component<Props, LocaleState> {
     render() {
         return (
             <div className="form-group row container">
-                <h3>Décrochez le poste de vos rêves !</h3>
+                <h3 style={{color: this.props.page.id === CONTACT && 'white'}}>Décrochez le poste de vos rêves !</h3>
                 <div className="candidature-form">
                     {this.props.page.id === RECRUTEMENT &&
                     <input
@@ -167,13 +167,14 @@ class FormInternal extends React.Component<Props, LocaleState> {
                     <button
                         disabled={!this.valid()}
                         onClick={this.post}
-                        type="button" className="btn btn-primary btn btn-block login-btn univ">
+                        type="button" className="btn btn-primary btn btn-block login-btn univ no-focus">
                         VALIDER</button>
+                    {this.props.page.id !== CONTACT &&
                     <div className="mt4">
                         <p>Vous avez des projets digitaux et désirez un devis gratuit? Une question?</p>
                         <h4>N'hésitez pas à nous contacter !</h4>
                         <p>Info Tech Agency <br /> 49 avenue de Paris <br />94800 Villejuif - France<br /></p>
-                    </div>
+                    </div>}
                 </div>
             </div>
         );

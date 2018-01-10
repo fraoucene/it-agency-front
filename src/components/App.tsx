@@ -11,13 +11,13 @@ import {setPage} from '../actions/page';
 import {Notifier} from './notification/notifier';
 import {Loader} from './loader';
 import {extractPage} from '../reducers/utils/url-utils';
-import {PageJoin} from './join/join';
 import {PageOffres} from './offres/offres';
 import {PageSolutions} from './solutions/solutions';
 import {PageContact} from './contact/contact';
 import {PageCandidature} from './candidature/candidature';
 import {Footer} from './common/footer/footer';
 import {PageRecrutement} from './candidature/recrutement';
+import {PageOffreDetail} from './offre-detail/offres-detail';
 
 interface LocalState {
 }
@@ -72,18 +72,18 @@ export class AppInternal extends React.Component<Props, LocalState> {
     render() {
         return (
             <div className="cover-full">
-                <Header/>
                 <div style={{height: '100%', width: '100%'}}>
+                    <Header/>
                     {
                         this.props.page.id === Page.ACCEUIL && <PageAcceuil /> ||
                         this.props.page.id === Page.SOLUTIONS && <PageSolutions /> ||
                         this.props.page.id === Page.OFFRES && <PageOffres /> ||
-                        this.props.page.id === Page.JOIN && <PageJoin /> ||
                         this.props.page.id === Page.CANDIDATURE && <PageCandidature /> ||
                         this.props.page.id === Page.RECRUTEMENT && <PageRecrutement /> ||
-                        this.props.page.id === Page.CONTACT && <PageContact />
+                        this.props.page.id === Page.CONTACT && <PageContact /> ||
+                        this.props.page.id === Page.OFFRES_DETAIL && <PageOffreDetail />
                     }
-                <Footer />
+                    <Footer />
                 </div>
                 <Loader/>
                 <Notifier/>

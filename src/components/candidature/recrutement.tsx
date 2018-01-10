@@ -26,7 +26,7 @@ class PageRecrutInternal extends React.Component<Props, void> {
     render() {
         return (
             <div>
-                <div className="candidature-wrapper">
+                <div className=" wrapper wrapper-recrutement">
                     <div className="container">
                         <h2 className="candidature-desc">
                             Rejoignez un leader du digital qui vous offrira l’opportunité de vous impliquer,
