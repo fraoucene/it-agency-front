@@ -13,7 +13,7 @@ type Props = DispatchProps;
 
 const mapDispatchToProps = (): DispatchProps => {
     return {
-        loadCandidaturePage: () => console.log('loadCandidaturePage...')
+        loadCandidaturePage: () => ''
     };
 };
 

@@ -69,7 +69,21 @@ export class AppInternal extends React.Component<Props, LocalState> {
         }
     }
 
+    componentDidMount(): void {
+        window.onpopstate = this.onBackButtonEvent;
+    }
+
+    onBackButtonEvent = (e: any) => {
+        e.preventDefault();
+        const h = this.props.myHistory;
+        h.push(window.location.pathname);
+        this.props.setHistory(h);
+        const page = Page.toPage(extractPage(e.target.window.location.pathname));
+        this.props.setPage(page);
+    }
+
     render() {
+
         return (
             <div className="cover-full">
                 <div style={{height: '100%', width: '100%'}}>

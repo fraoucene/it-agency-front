@@ -12,7 +12,7 @@ type Props = DispatchProps;
 
 const mapDispatchToProps = (): DispatchProps => {
     return {
-        loadSolutionsPage: () => console.log('loadSolutionsPage...')
+        loadSolutionsPage: () => ''
     };
 };
 

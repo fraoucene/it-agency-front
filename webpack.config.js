@@ -1,8 +1,8 @@
-var webpack = require("webpack");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var path = require('path');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry: {
@@ -12,7 +12,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        publicPath: '/'
+        publicPath: '/dist/'
     },
 
     devtool: "source-map",
@@ -76,7 +76,7 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            title: 'iFacture',
+            title: 'info tech agency',
             filename: 'index.html',
             template: './src/index.html',
             favicon: './src/favicon.ico',

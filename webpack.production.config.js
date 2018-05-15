@@ -4,7 +4,7 @@ var config = require("./webpack.config.js");
 
 config.devtool = false;
 
-config.output.publicPath = '/area/';
+config.output.publicPath = '/';
 
 config.plugins.unshift(
     new webpack.DefinePlugin({
@@ -24,7 +24,7 @@ config.plugins.push(
         comments: false
     }),
     new HtmlWebpackPlugin({
-        title: 'iFacture',
+        title: 'info tech agency',
         filename: 'index.html',
         template: './src/index-prod.html',
         favicon: './src/favicon.ico',

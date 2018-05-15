@@ -61,7 +61,7 @@ class PageOffresInternal extends React.Component<Props, LocaleState> {
         this.props.getDetail();
     }
     renderOffre = (offre: Offre, index: number) =>
-        <div key={index} className="col-sm-6 offre offre__hovered"
+        <div key={index} className="col-sm-6 offre offre__hovered h270"
             onClick={() => this.getDetail(offre)}>
             <div className="offre-title">{offre.title}</div>
                 <div className="offre-sub-title">
@@ -69,10 +69,11 @@ class PageOffresInternal extends React.Component<Props, LocaleState> {
                     <span>{offre.location}</span>
             </div>
             <div className="offre-content">
-                 <p>
-                     {offre.resume}
-                </p>
+                <div style={{textAlign: 'start'}}
+                     dangerouslySetInnerHTML={{__html: offre.detail}} />
+
             </div>
+            <div className="offre-mask"/>
         </div>
 
     render() {
@@ -112,13 +113,13 @@ class PageOffresInternal extends React.Component<Props, LocaleState> {
                         </div>
                         {this.filtredOffres().map((offre, index) =>
                             <div   key={index} className="col-sm-12">
-                                {(index % 2 === 0) &&
+                                {(true) &&
                                 <div>
                                     {this.renderOffre(offre, index)}
                                     <div className="col-sm-6"/>
                                 </div>}
 
-                                {(index % 2 !== 0) &&
+                                {(true) &&
                                 <div>
                                     <div className="col-sm-6"/>
                                     {this.renderOffre(offre, index)}

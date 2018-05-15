@@ -10,7 +10,7 @@ type Props = DispatchProps;
 
 const mapDispatchToProps = (): DispatchProps => {
     return {
-        loadContactPage: () => console.log('loadContactPage...')
+        loadContactPage: () => ''
     };
 };
 

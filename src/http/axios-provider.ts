@@ -10,9 +10,9 @@ export class AxiosProvider {
 
     private static createInstance() {
         Axios.defaults.baseURL = SERVER;
-        //Axios.defaults.headers.common['Authorization'] = +('Basic ' + btoa(username + ':' + password));
+        // Axios.defaults.headers.common['Authorization'] = +('Basic ' + btoa(username + ':' + password));
         // Axios.defaults.headers.common['Authorization'] = this.getStoredToken();
-        //Axios.defaults.auth = AxiosProvider.getAuth();
+        // Axios.defaults.auth = AxiosProvider.getAuth();
         this._axios = Axios.create({});
         this._axios.interceptors.response.use(
             response => response,
