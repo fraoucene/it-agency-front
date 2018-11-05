@@ -6,15 +6,14 @@
   "scripts": {
     "wp": "webpack",
     "build": "webpack -p --config webpack.production.config.js",
-    "build:prod": "webpack -p --config webpack.production.config.js",
     "build:int": "webpack -p --config webpack.int.config.js",
     "start:local": "webpack-dev-server --progress --inline --hot",
-    "start": "node server-prod.js",
-    "postinstall": "npm run build",
+    "start": "node server.js",
+    "postinstall": "npm run build:prod",
     "test": "mocha --colors --compilers ts:ts-node/register test/**/*.test.ts* --require jsdom-global/register ",
     "lint": "tslint --project tslint.json"
   },
-  "author": "jbcazaux",
+  "author": "gfraoucene",
   "dependencies": {
     "@types/react-ga": "^2.3.0",
     "@types/react-share": "^2.1.0",

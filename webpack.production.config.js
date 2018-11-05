@@ -24,7 +24,7 @@ config.plugins.push(
         comments: false
     }),
     new HtmlWebpackPlugin({
-        title: 'info tech agency',
+        title: 'Info tech agency',
         filename: 'index.html',
         template: './src/index-prod.html',
         favicon: './src/favicon.ico',
