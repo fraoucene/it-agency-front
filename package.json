@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "wp": "webpack",
-    "build": "webpack -p --config webpack.production.config.js",
+    "build:prod": "webpack -p --config webpack.production.config.js",
     "build:int": "webpack -p --config webpack.int.config.js",
     "start:local": "webpack-dev-server --progress --inline --hot",
     "start": "node server.js",
