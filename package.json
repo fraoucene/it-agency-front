@@ -14,7 +14,7 @@
   },
   "author": "jbcazaux",
   "dependencies": {
-    "axios": "0.16.2",
+    "axios": "0.21.1",
     "es6-shim": "0.35.3",
     "react": "15.4.2",
     "react-bootstrap": "0.30.8",
